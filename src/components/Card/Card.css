@@ -38,7 +38,7 @@
 .fav-btn {
   color: gray;
   background-color: white;
-  border: none;
+  border: 1px solid black;
   width: 65px;
   height: 45px;
   margin-right: 20px;

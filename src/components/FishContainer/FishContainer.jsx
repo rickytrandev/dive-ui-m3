@@ -1,13 +1,13 @@
 import "./FishContainer.css"
 import { Card } from "../Card/Card"
 
-export function FishContainer({ fish }) {
+export function FishContainer({ fish, addFavorite }) {
   return (
     <div className="main-content">
       {fish && fish.length > 0 ?
-        fish.map(f => <Card fish={f}/>)
+        fish.map(f => <Card addFavorite={addFavorite} fish={f}/>)
       : 
-        <p>Loading...</p>}
+      <p>One sec... Reeling in your fish.</p>}
     </div>
   )
 }
