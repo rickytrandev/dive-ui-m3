@@ -1,0 +1,26 @@
+.search-bar {
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 90%;
+}
+
+.search-bar > input {
+  height: 45px;
+  width: 75%;
+  min-width: 300px;
+  border-radius: 50px;
+  border: none;
+}
+
+.search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 15px 0px 15px;
+  min-width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  border: none;
+}

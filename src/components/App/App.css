@@ -1,0 +1,13 @@
+:root {
+  --main-color: #D46161;
+  --main-font: "Montserrat", sans-serif;
+  --second-font: "Overpass Mono", monospace;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}

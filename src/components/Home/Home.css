@@ -1,0 +1,20 @@
+main {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.main-content {
+  width: 70%;
+  background-color: #F6F5F5;
+  border-radius: 30px;
+}
+
+.filter {
+  width: 25%;
+  height: 50vh;
+  background-color: #F6F5F5;
+  border-radius: 30px;
+  position: sticky;
+  top: 0;
+}
