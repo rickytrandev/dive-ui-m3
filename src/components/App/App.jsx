@@ -1,50 +1,15 @@
-import { useState, useEffect } from 'react'
-import { getFish } from '../../apiCalls'
-import { Routes, Route } from 'react-router-dom'
-import { Home } from '../Home/Home'
-import { FishDetails } from '../FishDetails/FishDetails'
-import { Header } from '../Header/Header'
-import { Favorites } from '../Favorites/Favorites'
-import './App.css'
+import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { getFish } from '../../apiCalls';
+import { Home } from '../Home/Home';
+import { FishDetails } from '../FishDetails/FishDetails';
+import { Favorites } from '../Favorites/Favorites';
+import './App.css';
 
 function App() {
-  const [fish, setFish] = useState([])
-  const [error, setError] = useState('')
-  const [favorites, setFavorites] = useState([])
-
-  function addFavorite(id) {
-    const findFish = fish.find(f => f.id === id)
-    const fishInFavs = favorites.find(fish => fish.id === id)
-
-    if (!fishInFavs) {
-      setFish(prevFish => (
-        prevFish.map(fish => {
-          if (fish.id === id) {
-            return {
-              ...fish,
-              isFavorite : true
-            }
-          }
-          return fish
-        })
-      ))
-      setFavorites([...favorites, findFish])
-    } else {
-      const filterOut = favorites.filter(fish => fish.id !== id)
-      setFish(prevFish => (
-        prevFish.map(fish => {
-          if (fish.id === id) {
-            return {
-              ...fish,
-              isFavorite : false
-            }
-          }
-          return fish
-        })
-      ))
-      setFavorites(filterOut)
-    }
-  }
+  const [fish, setFish] = useState([]);
+  const [error, setError] = useState('');
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     getFish()
@@ -54,30 +19,43 @@ function App() {
         }
         return res.json();
       })
-      .then(fish => {
-        setFish(fish.fish);
-        console.log(fish);
+      .then(fishData => {
+        setFish(fishData.fish);
       })
       .catch(err => {
         console.log(err);
-        setError(`Something went wrong. Please try again later.`);
+        setError(`Gone fishing... Please try again later.`);
       });
   }, []);
-  
 
+  useEffect(() => {
+    const findFavorites = fish.filter(f => f.isFavorite);
+    setFavorites(findFavorites);
+  }, [fish]);
+
+  function addFavorite(id) {
+    setFish(prevFish => prevFish.map(f => {
+      if (f.id === id) {
+        return {
+          ...fishItem,
+          isFavorite: !f.isFavorite
+        };
+      }
+      return fishItem;
+    }));
+  }
 
   return (
     <>
-      {!fish && <p>Loading...</p>}
+      {!fish.length && <p>Loading...</p>}
       {error && <p>{error}</p>}
-      {/* <Header /> */}
       <Routes>
-        <Route path='/main' element={<Home addFavorite={addFavorite} fish={fish} />}/>
-        <Route path='/favorites' element={<Favorites fish={fish} />} />
-        <Route path='main/fish-details/:id' element={<FishDetails addFavorite={addFavorite} fish={fish}/>} />
+        <Route path='/main' element={<Home addFavorite={addFavorite} fish={fish} />} />
+        <Route path='/favorites' element={<Favorites addFavorite={addFavorite} favorites={favorites} />} />
+        <Route path='/main/fish-details/:id' element={<FishDetails addFavorite={addFavorite} fish={fish} />} />
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
