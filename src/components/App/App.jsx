@@ -37,11 +37,11 @@ function App() {
     setFish(prevFish => prevFish.map(f => {
       if (f.id === id) {
         return {
-          ...fishItem,
+          ...f,
           isFavorite: !f.isFavorite
         };
       }
-      return fishItem;
+      return f;
     }));
   }
 
