@@ -1,4 +1,5 @@
 import "./Header.css"
+import { Link } from "react-router-dom"
 import { Search } from "../Search/Search"
 
 export function Header() {
@@ -6,7 +7,9 @@ export function Header() {
     <header>
       <div className="title-container">
         <img className="logo" src="/public/sushi.png" alt="nigiri png" />
-        <h1>//dive</h1>
+        <Link to='/' >
+          <h1>//dive</h1>
+        </Link>
       </div>
       <Search />  
     </header>

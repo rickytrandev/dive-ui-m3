@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
-import './App.css'
 import { getFish } from '../../apiCalls'
 import { Routes, Route } from 'react-router-dom'
 import { Home } from '../Home/Home'
 import { FishDetails } from '../FishDetails/FishDetails'
 import { Header } from '../Header/Header'
+import { Favorites } from '../Favorites/Favorites'
+import './App.css'
 
 function App() {
   const [fish, setFish] = useState([])
@@ -69,9 +70,10 @@ function App() {
     <>
       {!fish && <p>Loading...</p>}
       {error && <p>{error}</p>}
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path='/main' element={<Home addFavorite={addFavorite} fish={fish} />}/>
+        <Route path='/favorites' element={<Favorites fish={fish} />} />
         <Route path='main/fish-details/:id' element={<FishDetails addFavorite={addFavorite} fish={fish}/>} />
       </Routes>
     </>

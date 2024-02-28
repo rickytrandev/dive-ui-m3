@@ -1,8 +1,8 @@
-.heart-btn {
+.home-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 15px;
+  margin-right: 25px;
   min-width: 45px;
   height: 45px;
   border-radius: 50px;
