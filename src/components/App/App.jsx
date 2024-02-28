@@ -51,7 +51,8 @@ function App() {
       {error && <p>{error}</p>}
       <Routes>
         <Route path='/main' element={<Home addFavorite={addFavorite} fish={fish} />} />
-        <Route path='/favorites' element={<Favorites addFavorite={addFavorite} favorites={favorites} />} />
+        <Route path='/main/favorites' element={<Favorites addFavorite={addFavorite} favorites={favorites} />} />
+        <Route path='/main/favorites/fish-details/:id' element={<FishDetails addFavorite={addFavorite} fish={fish} />} />
         <Route path='/main/fish-details/:id' element={<FishDetails addFavorite={addFavorite} fish={fish} />} />
       </Routes>
     </>
