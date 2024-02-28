@@ -1,0 +1,48 @@
+.fav-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px;
+  font-family: var(--second-font);
+  gap: 50px;
+}
+
+.fav-container h3{
+  font-family: var(--second-font);
+  font-weight: 100 !important;
+  margin: 10px;
+}
+
+.fav-container p {
+  grid-column: span 2;
+}
+
+.fav-card {
+  display: flex;
+  background-color: var(--gray);
+  border-radius: var(--radius);
+  width: 550px;
+  max-height: 200px;
+  display: flex;
+  flex-direction: row;
+}
+
+.fav-img {
+  width: 300px;
+  height: 200px;
+  border-radius: 15px;
+}
+
+.fav-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fav-names {
+  margin: 15px;
+}
+
+.fav-container .button-container {
+  margin: 0 0 15px 30px;
+}
+

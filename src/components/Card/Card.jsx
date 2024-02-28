@@ -7,7 +7,6 @@ export function Card({ fish, addFavorite }) {
 
   return (
     <div key={fish.id} id={fish.id} className="fish-card">
-      {console.log(isFavorite)}
       <img src={fish.image_url} alt={`${fish.name} sushi`} />
       <div className="details-container">
         <div className="names">

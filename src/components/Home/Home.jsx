@@ -7,6 +7,7 @@ export function Home({ addFavorite, fish}) {
 
   return (
     <>
+      <Header />
       <main>
         <Filter />
         <FishContainer addFavorite={addFavorite} fish={fish}/>
