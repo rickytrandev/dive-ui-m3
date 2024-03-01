@@ -1,0 +1,67 @@
+{
+  "fish": [
+  {
+  "id": 1,
+  "isFavorite": false,
+  "name": "Tuna",
+  "japanese_name": "Maguro (マグロ)",
+  "description": "Tuna is a popular sushi fish known for its rich flavor and firm texture. It comes in different varieties such as bluefin, yellowfin, and albacore. Even though the generic term maguro covers several species, bluefin tuna species are preferred to the other species, especially in high-end restaurants. Bluefin tuna is called hon maguro (本鮪) in Japanese, which literally means “genuine” or “true tuna”.",
+  "flavor_profile": "The taste of maguro sushi or sashimi depends on the species of tuna and the part of the body from which the meat is taken. In general, the tuna meat is very tender and has an intense taste. Meat that comes from the center of the body is dark red, shiny and very lean, it is called akami (赤身) in Japanese. Akami has a fine sour taste which is accompanied by full-bodied umami aromas. The texture is velvet-like and firm without being tough. The fatty meat of maguro is known as toro (トロ), derived from torori (とろり) and symbolically describes the feeling of toro, which literally melts on the tongue. Toro is mainly located on the back and belly of the maguro body. It is exceptionally tender, very rich in fat, and has an intense, sweet buttery taste that is unmistakable.",
+  "image_url": "http://localhost:8080/assets/maguro.jpeg",
+  "taste_profile": {
+  "taste": "Rich",
+  "texture": "Firm"
+  },
+  "origin": "Various regions worldwide",
+  "sustainability": "Varies by species; some tuna species are overfished while others are sustainably harvested",
+  "nutritional_information": {
+  "calories_per_serving": 184,
+  "protein": "29g",
+  "fat": "6g",
+  "carbohydrates": "0g"
+  }
+  },
+  {
+  "id": 2,
+  "isFavorite": false,
+  "name": "Salmon",
+  "japanese_name": "Sake (サケ)",
+  "description": "Sake-rui (サケ類) is the Japanese generic term for fishes belonging to the family of salmonids. In a narrower sense, the Japanese term sake refers to the pacific salmons, especially to chuma salmon (shirosake, シロザケ), in a broader sense, the term refers to a category of salmon fish that bear the term sake in their name and whose meat is similar in color and texture to that of chum salmon. Traditionally, these fish have been classified as belonging to the sake group if they spend most of their lives in salt water. Only since modern times salmon is prepared as sushi to the extent we know it today. Traditionally, salmon was rarely used for the preparation of sushi or sashimi. Even though the term sake traditionally refers to Pacific salmons, today it is mainly the Atlantic salmon from aquaculture that is used.",
+  "flavor_profile": "The meat is greasy, extraordinarily tender and is accompanied by intense buttery flavors. The intensity and texture of sake meat differs between species and also whether they are farmed or wild.",
+  "image_url": "http://localhost:8080/assets/sake.jpeg",
+  "taste_profile": {
+  "taste": "Buttery",
+  "texture": "Tender"
+  },
+  "origin": "Atlantic Ocean, Pacific Ocean",
+  "sustainability": "Varies by region and farming practices; some wild-caught salmon populations are endangered, while sustainably farmed salmon is available.",
+  "nutritional_information": {
+  "calories_per_serving": 131,
+  "protein": "22g",
+  "fat": "5g",
+  "carbohydrates": "0g"
+  }
+  },
+  {
+  "id": 3,
+  "isFavorite": false,
+  "name": "Escolar",
+  "japanese_name": "Aburasokomutsu (アブラソコムツすし)",
+  "description": "Aburasokomutsu is the Japanese name for the escolar, which is sometimes referred to “butterfish” or incorrectly “white tuna”. Although occasionally referred to as a butterfish, the Escolar is not a member of the butterfish family, but a member of the snake mackerel family. Unlike in Japan, you can often find aburasokomutsu in the display (neta-bako, ネタ箱) of western sushi bars and restaurants. The name “butterfish” or “white tuna” originates from a purely commercial motivation and should sound more appealing to the consumer.",
+  "flavor_profile": "There is hardly any other fish that is better suited to the false name “butterfish” or “white toro” than the escolar. The shiny, matte white meat is firm, very tender, full-bodied and accompanied by aromas that have a strikingly strong taste of butter. Compared to tuna, the meat is slightly more sour and less fresh in taste.",
+  "image_url": "http://localhost:8080/assets/escolar.avif",
+  "taste_profile": {
+  "taste": "Buttery",
+  "texture": "Tender"
+  },
+  "origin": "Atlantic Ocean, Pacific Ocean",
+  "sustainability": "Varies by region and farming practices; some wild-caught salmon populations are endangered, while sustainably farmed salmon is available.",
+  "nutritional_information": {
+  "calories_per_serving": 131,
+  "protein": "22g",
+  "fat": "5g",
+  "carbohydrates": "0g"
+  }
+  }
+]
+}
