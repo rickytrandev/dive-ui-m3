@@ -8,6 +8,7 @@ header {
 
 .title-container {
   display: flex;
+  margin-right: 20px;
 }
 a > h1{
   color: white !important;

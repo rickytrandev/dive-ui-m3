@@ -28,7 +28,7 @@ article {
 }
 
 article > h2, h3 {
-  font-weight: 500 !important;
+  font-weight: 100 !important;
 }
 
 article > h3 {

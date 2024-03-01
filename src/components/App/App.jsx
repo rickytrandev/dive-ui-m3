@@ -4,6 +4,7 @@ import { getFish } from '../../apiCalls';
 import { Home } from '../Home/Home';
 import { FishDetails } from '../FishDetails/FishDetails';
 import { Favorites } from '../Favorites/Favorites';
+import { Hero } from '../Hero/Hero';
 import './App.css';
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
       {!fish.length && <p>Loading...</p>}
       {error && <p>{error}</p>}
       <Routes>
+        <Route path='/' element={<Hero />} />
         <Route path='/main' element={<Home addFavorite={addFavorite} fish={fish} />} />
         <Route path='/main/favorites' element={<Favorites addFavorite={addFavorite} favorites={favorites} />} />
         <Route path='/main/favorites/fish-details/:id' element={<FishDetails addFavorite={addFavorite} fish={fish} />} />
