@@ -32,7 +32,7 @@ function App() {
   useEffect(() => {
     const findFavorites = fish.filter(f => f.isFavorite);
     setFavorites(findFavorites);
-  }, [fish]);
+  }, [fish]); 
 
   function addFavorite(id) {
     setFish(prevFish => prevFish.map(f => {
