@@ -1,13 +1,26 @@
 import "./FishContainer.css"
 import { Card } from "../Card/Card"
+import PropTypes from "prop-types"
+import { fishShape } from "../../propTypes/fishShape";
+
 
 export function FishContainer({ fish, addFavorite }) {
   return (
     <div className="main-content">
       {fish && fish.length > 0 ?
-        fish.map(f => <Card addFavorite={addFavorite} fish={f}/>)
+        fish.map(f => <Card key={f.id} addFavorite={addFavorite} fish={f}/>)
       : 
-      <p>One sec... Reeling in your fish.</p>}
+      <p>One moment... Reeling in your fish.</p>}
     </div>
   )
+}
+
+FishContainer.propTypes = {
+  fish: PropTypes.arrayOf(fishShape),
+  addFavorite: PropTypes.func.isRequired
+}
+
+Card.propTypes = {
+  // fish: PropTypes.shape(fishShape),
+  addFavorite: PropTypes.func.isRequired
 }
