@@ -4,11 +4,11 @@ import PropTypes from "prop-types"
 import { fishShape } from "../../propTypes/fishShape";
 
 
-export function FishContainer({ fish, addFavorite }) {
+export function FishContainer({ filteredFish, addFavorite }) {
   return (
     <div className="main-content">
-      {fish && fish.length > 0 ?
-        fish.map(f => <Card key={f.id} addFavorite={addFavorite} fish={f}/>)
+      {filteredFish && filteredFish.length > 0 ?
+        filteredFish.map(f => <Card key={f.id} addFavorite={addFavorite} fish={f}/>)
       : 
       <p>One moment... Reeling in your fish.</p>}
     </div>

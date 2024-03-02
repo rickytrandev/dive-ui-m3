@@ -36,4 +36,5 @@ a > h1{
 
 @media (width < 1200px) {
   header { height: 10vh; }
+  a > h1 { font-size: 4rem; }
 }
