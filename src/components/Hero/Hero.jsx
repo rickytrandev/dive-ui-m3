@@ -15,8 +15,8 @@ export function Hero() {
         </div>
         <div className="images-container">
           <div className="white-box">
-            <img className="img-1" src="./public/sushi-box.avif" alt="" />
-            <img className="img-2" src="./public/tuna-sushi.avif" alt="" />
+            <img className="img-1" src="/sushi-box.avif" alt="" />
+            <img className="img-2" src="/tuna-sushi.avif" alt="" />
             <div className="red-box"></div>
           </div>
         </div>
