@@ -1,7 +1,7 @@
 .fav-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
   margin: 20px;
   font-family: var(--second-font);
   gap: 50px;
@@ -13,9 +13,9 @@
   margin: 10px;
 }
 
-/* .fav-container p {
-  grid-column: span 2;
-} */
+.fav-container p {
+  grid-column: span 2
+}
 
 .fav-card {
   display: flex;
@@ -47,3 +47,6 @@
   margin: 0 0 15px 30px;
 }
 
+@media (width < 1200px) {
+  .fav-container { grid-template-columns: 1fr;}
+}
