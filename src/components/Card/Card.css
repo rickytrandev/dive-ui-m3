@@ -41,3 +41,10 @@
   margin-right: 20px;
   border-radius: 10px;
 }
+
+@media (width > 1200px) {
+  .fish-card img {
+    width: 350px;
+    height: 250px;
+  }
+}

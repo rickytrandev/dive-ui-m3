@@ -2,7 +2,7 @@ import "./Header.css"
 import { Link } from "react-router-dom"
 import { Search } from "../Search/Search"
 
-export function Header() {
+export function Header({ handleSearch }) {
   return (
     <header>
       <div className="title-container">
@@ -11,7 +11,7 @@ export function Header() {
           <h1>//dive</h1>
         </Link>
       </div>
-      <Search />  
+      <Search handleSearch={handleSearch} />  
     </header>
   )
 }
