@@ -5,9 +5,11 @@ import { FishContainer } from "../FishContainer/FishContainer"
 import PropTypes from "prop-types";
 import { fishShape } from "../../propTypes/fishShape";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function Home({ addFavorite, fish}) {
   const [filteredFish, setFilteredFish] = useState([])
+  const navigate = useNavigate()
 
   useEffect(() => {
     setFilteredFish(fish)
@@ -22,6 +24,7 @@ export function Home({ addFavorite, fish}) {
       return englishName.includes(searchTerm) || japaneseName.includes(searchTerm);
     });
     setFilteredFish(search);
+    navigate('/main')
   }
   
 
