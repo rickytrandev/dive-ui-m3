@@ -26,7 +26,7 @@ export function Search({ handleSearch }) {
         value={query}
         onChange={handleInputChange}
         onKeyDown={handleKeyPress}
-        // onClick={() => navigate('/main')}
+        onClick={() => navigate('/main')}
       />
         <button onClick={() => handleSearch(query)} className="search-btn" >
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
