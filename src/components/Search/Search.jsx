@@ -3,6 +3,7 @@ import { useState } from "react";
 import { HeartBtn } from "../HeartBtn/HeartBtn";
 import { HomeBtn } from "../HomeBtn/HomeBtn";
 import { Link, useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export function Search({ handleSearch }) {
   const [query, setQuery] = useState('');
@@ -37,4 +38,8 @@ export function Search({ handleSearch }) {
       <HomeBtn />
     </div>
   )
+}
+
+Search.propTypes = {
+  handleSearch: PropTypes.func.isRequired
 }

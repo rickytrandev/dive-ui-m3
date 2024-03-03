@@ -1,7 +1,7 @@
 import "./Header.css"
 import { Link } from "react-router-dom"
 import { Search } from "../Search/Search"
-
+import PropTypes from "prop-types";
 export function Header({ handleSearch }) {
   return (
     <header>
@@ -14,4 +14,8 @@ export function Header({ handleSearch }) {
       <Search handleSearch={handleSearch} />  
     </header>
   )
+}
+
+Header.propTypes = {
+  handleSearch: PropTypes.func.isRequired
 }

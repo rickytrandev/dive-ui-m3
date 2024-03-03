@@ -16,7 +16,7 @@ export function FishContainer({ filteredFish, addFavorite }) {
 }
 
 FishContainer.propTypes = {
-  fish: PropTypes.arrayOf(fishShape),
+  filteredFish: PropTypes.arrayOf(fishShape),
   addFavorite: PropTypes.func.isRequired
 }
 
