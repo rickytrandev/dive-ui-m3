@@ -17,5 +17,5 @@ export function Header({ handleSearch }) {
 }
 
 Header.propTypes = {
-  handleSearch: PropTypes.func.isRequired
+  handleSearch: PropTypes.func
 }

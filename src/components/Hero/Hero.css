@@ -67,7 +67,7 @@
 .call-to-action p {
   line-height: 2em;
   font-weight: lighter;
-
+  font-size: 1.3rem;
 }
 
 .white-box {
@@ -89,13 +89,14 @@
 }
 
   @media (width > 1200px) {
-    /* .call-to-action p { font-size: 1em; } */
+    .call-to-action p { font-size: 1em; }
   }
   @media (width < 1200px) {
     .hero-main { flex-direction: column; }
     .images-container{ order: -1; width: 100%; height: 85vh;}
     .images-container img { width: 300px; }    
-    .white-box{ width: 70%; height: 85vh;}
-    .action{ width: 100%; height: fit-content;}
-    .call-to-action{max-width: 40%; font-size: 1.2rem;}
+    .white-box{ width: 70%; height: 85vh; }
+    .action{ width: 100%; height: fit-content; }
+    .call-to-action{max-width: 40%; }
+    .call-to-action p {font-size: 1.2rem; }
   }
