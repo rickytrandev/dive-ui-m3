@@ -7,11 +7,17 @@
 }
 
 .search-bar > input {
+  font-family: var(--main-font);
+  font-size: 1.2rem;
   height: 45px;
   width: 100%;
   min-width: 300px;
   border-radius: 50px;
   border: none;
+}
+
+.search-bar input[type="text"] {
+  padding-left: 25px; /* Move the placeholder text 15px from the left */
 }
 
 .search-btn {

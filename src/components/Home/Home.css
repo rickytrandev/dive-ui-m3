@@ -9,12 +9,3 @@ main {
   background-color: var(--gray);
   border-radius: 30px;
 }
-
-.filter {
-  width: 25%;
-  height: 50vh;
-  background-color: var(--gray);
-  border-radius: 30px;
-  position: sticky;
-  top: 0;
-}

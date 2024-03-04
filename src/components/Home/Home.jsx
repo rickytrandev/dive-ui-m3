@@ -27,12 +27,22 @@ export function Home({ addFavorite, fish}) {
     navigate('/main')
   }
   
+  function handleFilter(filter) {
+    const filteredFish = fish.filter(f => filter.includes(f.taste_profile.taste.toLowerCase()) || filter.includes(f.taste_profile.texture.toLowerCase()))
+    console.log(filteredFish);
+    if (!filter.length) {
+      setFilteredFish(fish)
+    }
+    else {
+      setFilteredFish(filteredFish)
+    }
+  }
 
   return (
     <>
       <Header handleSearch={handleSearch} />
       <main>
-        <Filter />
+        <Filter handleFilter={handleFilter} filteredFish={filteredFish} />
         <FishContainer addFavorite={addFavorite} filteredFish={filteredFish}/>
       </main>
     </>
