@@ -29,7 +29,7 @@ function App() {
         setError(`Gone fishing... Please try again later.`);
         navigate('*'); 
       });
-  }, [navigate]);
+  }, []);
 
   useEffect(() => {
     const findFavorites = fish.filter(f => f.isFavorite);
