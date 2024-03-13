@@ -37,5 +37,8 @@ Spin up the app!
 `npm run dev`  
 
 For E2E testing:  
-`npm run cy`
+`npm run cy`  
+
+## Resources
+https://www.sushi-pedia.com/en/
 
