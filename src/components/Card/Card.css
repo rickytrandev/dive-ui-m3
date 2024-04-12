@@ -14,6 +14,7 @@
 }
 
 .details-container {
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -45,9 +46,4 @@
   border-radius: 10px;
 }
 
-@media (width > 1400px) {
-  .fish-card img {
-    width: 350px;
-    height: 250px;
-  }
-}
+
