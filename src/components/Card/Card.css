@@ -20,6 +20,9 @@
   font-family: var(--second-font);
   margin-bottom: 50px;
 }
+.names h3:nth-child(1) {
+  margin-top: 0;
+}
 
 .go-btn {
   background-color: var(--main-color) !important;
