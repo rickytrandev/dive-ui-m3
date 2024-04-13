@@ -5,7 +5,6 @@ import { Link } from "react-router-dom"
 export function Hero() {
   return (
     <>
-      <Header />
       <main className="hero-main">
         <img className="mobile-img" src="/sushi-box.avif" alt="sushi-box" />
         <div className="action">

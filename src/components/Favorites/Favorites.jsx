@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 import PropTypes from "prop-types"
 import { fishShape } from "../../propTypes/fishShape";
 
-export function Favorites({ favorites, addFavorite }) {
+export function Favorites({ favorites, addFavorite, isMenuOpen }) {
   
   return (
     <>
-      <Header />
+    {!isMenuOpen &&
       <div className="fav-container">
         {!favorites.length && <p>We're unable to reel in your catch.. Add some fish to your favorites!</p>}
         {favorites.map(fish => (
@@ -37,6 +37,7 @@ export function Favorites({ favorites, addFavorite }) {
           </div>
         ))}
       </div>
+    }
     </>
   )
 }

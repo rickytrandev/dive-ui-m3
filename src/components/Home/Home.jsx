@@ -1,51 +1,39 @@
 import "./Home.css"
-import { Header } from "../Header/Header"
-import { Filter } from "../Filter/Filter"
+import { useState, useEffect } from "react"
+import { MobileFilter } from "../MobileFilter/MobileFilter";
+import { Filter } from "../Filter/Filter";
 import { FishContainer } from "../FishContainer/FishContainer"
 import PropTypes from "prop-types";
 import { fishShape } from "../../propTypes/fishShape";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { MobileSearchFilter } from "../MobileSearchFilter/MobileSearchFilter";
 
-export function Home({ addFavorite, fish}) {
-  const [filteredFish, setFilteredFish] = useState([])
-  const navigate = useNavigate()
+export function Home({ addFavorite, handleFilter, filteredFish, isMenuOpen, handleSearch}) {
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+  
+  function handleFilterClick() {
+    setIsFilterOpen(!isFilterOpen);
+  }
+
+  const [filter, setFilter] = useState([]);
 
   useEffect(() => {
-    setFilteredFish(fish)
-  }, [fish])
+    handleFilter(filter);
+  }, [filter]);
 
-  function handleSearch(query) {
-    const search = fish.filter(f => {
-      const englishName = f.name.toLowerCase();
-      const japaneseName = f.japanese_name.toLowerCase();
-      const searchTerm = query.toLowerCase();
-  
-      return englishName.includes(searchTerm) || japaneseName.includes(searchTerm);
-    });
-    setFilteredFish(search);
-    navigate('/main')
-  }
-  
-  function handleFilter(filter) {
-    const filteredFish = fish.filter(f => filter.includes(f.taste_profile.taste.toLowerCase()) || filter.includes(f.taste_profile.texture.toLowerCase()))
-    if (!filter.length) {
-      setFilteredFish(fish)
-    }
-    else {
-      setFilteredFish(filteredFish)
-    }
-  }
 
   return (
     <>
-      <Header handleSearch={handleSearch} />
-      <main>
-        <Filter handleFilter={handleFilter} filteredFish={filteredFish} />
-        <FishContainer addFavorite={addFavorite} filteredFish={filteredFish}/>
-      </main>
+      {isFilterOpen ? (
+        <MobileFilter filter={filter} setFilter={setFilter} handleFilterClick={handleFilterClick} />
+      ) : (
+        !isMenuOpen &&
+        <main>
+          <MobileSearchFilter handleFilter={handleFilter} filteredFish={filteredFish} handleSearch={handleSearch} handleFilterClick={handleFilterClick} />
+          <Filter filter={filter} setFilter={setFilter} />
+          <FishContainer addFavorite={addFavorite} filteredFish={filteredFish}/>
+        </main>
+      )}
     </>
-
   )
 }
 

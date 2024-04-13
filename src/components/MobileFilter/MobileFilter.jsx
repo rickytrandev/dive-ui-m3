@@ -1,24 +1,23 @@
-import PropTypes from "prop-types";
-import "./Filter.css";
+import './MobileFilter.css';
 
-export function Filter({ filter, setFilter }) {
+export function MobileFilter({ filter, setFilter, handleFilterClick }) {
 
-  function handleFilterChange(event) {
-    const { value, checked } = event.target;
-  
-    setFilter(prevFilter => {
-      if (value === 'all') {
-        return [];
-      } else if (checked) {
-        return [...prevFilter, value];
-      } else {
-        return prevFilter.filter(filterValue => filterValue !== value);
-      }
-    });
-  }
+function handleFilterChange(event) {
+  const { value, checked } = event.target;
+
+  setFilter(prevFilter => {
+    if (value === 'all') {
+      return [];
+    } else if (checked) {
+      return [...prevFilter, value];
+    } else {
+      return prevFilter.filter(filterValue => filterValue !== value);
+    }
+  });
+}
 
   return (
-    <div className="filter">
+    <div className="mobile-filter">
       <h2>Filter:</h2>
       <label>
         <input
@@ -146,10 +145,10 @@ export function Filter({ filter, setFilter }) {
         />
         Creamy
       </label>
+      <div className="filter-nav">
+        <button onClick={() => setFilter([])}>Clear</button>
+        <button onClick={() => handleFilterClick()}>Done</button>
+      </div>
     </div>
   );
 }
-
-Filter.propTypes = {
-  handleFilter: PropTypes.func.isRequired,
-};
