@@ -89,10 +89,8 @@ button:hover {
     width: 90%;
   }
   .fish-card img {
-    /* width: 60%;
-    max-width: 300px; */
-    /* height: 70%; */
-    width: 266px;
+    width: 60%;
+    max-width: 266px;
     margin: 20px 0 20px 0;
   }
   .fish-card {
