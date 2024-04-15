@@ -1,11 +1,8 @@
-import "./Search.css";
-import { useState } from "react";
-import { HeartBtn } from "../HeartBtn/HeartBtn";
-import { HomeBtn } from "../HomeBtn/HomeBtn";
-import { Link, useNavigate } from "react-router-dom";
-import PropTypes from "prop-types";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./MobileSearchFilter.css";
 
-export function Search({ handleSearch }) {
+export function MobileSearchFilter({ handleSearch, handleFilterClick }) {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
 
@@ -20,7 +17,20 @@ export function Search({ handleSearch }) {
   }
 
   return (
-    <>
+    <div className="mobile-search-container">
+      <button className="filter-button" onClick={handleFilterClick} >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="45"
+          height="45"
+          fill="#d46161"
+          class="bi bi-filter-circle"
+          viewBox="0 0 16 16"
+        >
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+          <path d="M7 11.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5" />
+        </svg>
+      </button>
       <div className="search-container">
         <div className="search-bar">
           <input
@@ -49,19 +59,6 @@ export function Search({ handleSearch }) {
           </button>
         </div>
       </div>
-        <div className="icon-container">
-          <Link to="/main">
-            <HomeBtn />
-          </Link>
-          <Link to="/favorites">
-            <HeartBtn />
-          </Link>
-        </div>
-       
-    </>
+    </div>
   );
 }
-
-Search.propTypes = {
-  handleSearch: PropTypes.func,
-};

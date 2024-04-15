@@ -6,7 +6,7 @@ import { Header } from "../Header/Header";
 import PropTypes from "prop-types"
 import { fishShape } from "../../propTypes/fishShape";
 
-export function FishDetails({ fish, addFavorite }) {
+export function FishDetails({ fish, addFavorite, isMenuOpen }) {
   const [findFish, setFindFish] = useState(null);
   const { id } = useParams();
   const { isFavorite } = findFish || {}
@@ -19,7 +19,7 @@ export function FishDetails({ fish, addFavorite }) {
   
   return (
     <>
-      <Header />
+     {!isMenuOpen &&
       <div className="fish-details-container">
         <aside>
           {findFish && <img src={findFish.image_url} alt={`${findFish.name} nigiri`} />}
@@ -65,6 +65,7 @@ export function FishDetails({ fish, addFavorite }) {
           </div>
         </main>
       </div>
+      }
     </>
   );
 }

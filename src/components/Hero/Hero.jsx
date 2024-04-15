@@ -5,8 +5,8 @@ import { Link } from "react-router-dom"
 export function Hero() {
   return (
     <>
-      <Header />
       <main className="hero-main">
+        <img className="mobile-img" src="/sushi-box.avif" alt="sushi-box" />
         <div className="action">
           <div className="call-to-action">
             <p>Discover the art of sushi like never before. Dive into a world of flavor, texture, and culture with our comprehensive sushi encyclopedia app. From rich maguro to delicate hamachi, explore the tastes and traditions of each sushi fish. Start your culinary journey today and elevate your sushi experience with our app.</p>
@@ -15,8 +15,8 @@ export function Hero() {
         </div>
         <div className="images-container">
           <div className="white-box">
-            <img className="img-1" src="/sushi-box.avif" alt="" />
-            <img className="img-2" src="/tuna-sushi.avif" alt="" />
+            <img className="img-1" src="/sushi-box.avif" alt="sushi-box" />
+            <img className="img-2" src="/tuna-sushi.avif" alt="tuna-sushi" />
             <div className="red-box"></div>
           </div>
         </div>

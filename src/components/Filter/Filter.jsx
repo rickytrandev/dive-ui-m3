@@ -1,30 +1,28 @@
-import { useEffect, useState } from "react"
 import PropTypes from "prop-types";
-import "./Filter.css"
+import "./Filter.css";
 
-
-export function Filter({ handleFilter }) {
-  const [filter, setFilter] = useState([])
-
-  useEffect(() => {
-    handleFilter(filter)
-  }, [filter])
+export function Filter({ filter, setFilter }) {
 
   function handleFilterChange(event) {
-    if (event.target.value === 'all') {
-      setFilter([]);
-    } else {
-      setFilter(prevFilter => [...prevFilter, event.target.value]);
-    }
-  }
+    const { value, checked } = event.target;
   
+    setFilter(prevFilter => {
+      if (value === 'all') {
+        return [];
+      } else if (checked) {
+        return [...prevFilter, value];
+      } else {
+        return prevFilter.filter(filterValue => filterValue !== value);
+      }
+    });
+  }
 
   return (
     <div className="filter">
       <h2>Filter:</h2>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           value="all"
           checked={filter.length === 0}
           onChange={handleFilterChange}
@@ -33,135 +31,125 @@ export function Filter({ handleFilter }) {
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           value="rich"
-          checked={filter.includes('rich')}
+          checked={filter.includes("rich")}
           onChange={handleFilterChange}
         />
         Rich
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           value="tender"
-          checked={filter.includes('tender')}
+          checked={filter.includes("tender")}
           onChange={handleFilterChange}
         />
         Tender
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           value="firm"
-          checked={filter.includes('firm')}
+          checked={filter.includes("firm")}
           onChange={handleFilterChange}
         />
         Firm
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           value="buttery"
-          checked={filter.includes('buttery')}
+          checked={filter.includes("buttery")}
           onChange={handleFilterChange}
         />
         Buttery
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           value="oily"
-          checked={filter.includes('oily')}
+          checked={filter.includes("oily")}
           onChange={handleFilterChange}
         />
         Oily
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           value="delicate"
-          checked={filter.includes('delicate')}
+          checked={filter.includes("delicate")}
           onChange={handleFilterChange}
         />
         Delicate
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           value="mild"
-          checked={filter.includes('mild')}
+          checked={filter.includes("mild")}
           onChange={handleFilterChange}
         />
         Mild
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           value="sweet"
-          checked={filter.includes('sweet')}
+          checked={filter.includes("sweet")}
           onChange={handleFilterChange}
         />
         Sweet
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           value="succulent"
-          checked={filter.includes('succulent')}
+          checked={filter.includes("succulent")}
           onChange={handleFilterChange}
         />
         Succulent
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           value="chewy"
-          checked={filter.includes('chewy')}
+          checked={filter.includes("chewy")}
           onChange={handleFilterChange}
         />
         Chewy
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           value="briny"
-          checked={filter.includes('briny')}
+          checked={filter.includes("briny")}
           onChange={handleFilterChange}
         />
         Briny
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           value="crunchy"
-          checked={filter.includes('crunchy')}
+          checked={filter.includes("crunchy")}
           onChange={handleFilterChange}
         />
         Crunchy
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           value="creamy"
-          checked={filter.includes('creamy')}
+          checked={filter.includes("creamy")}
           onChange={handleFilterChange}
         />
         Creamy
       </label>
-      <label>
-        <input
-          type="radio"
-          value="fluffy"
-          checked={filter.includes('fluffy')}
-          onChange={handleFilterChange}
-        />
-        Fluffy
-      </label>
-      
     </div>
-  )
+  );
 }
 
 Filter.propTypes = {
-  handleFilter: PropTypes.func.isRequired
-}
+  handleFilter: PropTypes.func.isRequired,
+};
