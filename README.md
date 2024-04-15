@@ -16,8 +16,8 @@ React, React Router, CSS, Prop-types, Cypress, Express.js, Node.js, Fetch API
 ![ScreenRecording2024-03-13at10 37 12AM-ezgif com-video-to-gif-converter](https://github.com/rickytrandev/dive-ui-m3/assets/105529508/07c14154-84c9-4445-8729-bfe0f26d3467)
 
 ## Mobile Responsiveness
-<img width="430" alt="Screenshot 2024-04-13 at 3 53 26 PM" src="https://github.com/rickytrandev/dive-ui-m3/assets/105529508/c0c1b550-1495-4a40-b571-64a707530a5b">
-<img width="429" alt="Screenshot 2024-04-14 at 8 38 20 PM" src="https://github.com/rickytrandev/dive-ui-m3/assets/105529508/4b479448-1930-4c32-bd66-826a824d7484">
+<img width="300" alt="Screenshot 2024-04-13 at 3 53 26 PM" src="https://github.com/rickytrandev/dive-ui-m3/assets/105529508/c0c1b550-1495-4a40-b571-64a707530a5b">
+<img width="300" alt="Screenshot 2024-04-14 at 8 38 20 PM" src="https://github.com/rickytrandev/dive-ui-m3/assets/105529508/4b479448-1930-4c32-bd66-826a824d7484">
 
 
 ## Links
