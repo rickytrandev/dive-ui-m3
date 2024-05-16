@@ -132,6 +132,9 @@ button:hover {
     min-width: 60px;
     margin-right: 0;
   }
+  .fav-btn:hover {
+    transform: none;
+  }
   .filter {
     display: none;
   }
